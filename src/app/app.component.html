@@ -1,0 +1,28 @@
+<h1>Switchboard</h1>
+<div *ngFor='let num of order; let idx = index' [ngStyle]="{
+  'display':'inline-block'}">
+<div (click)='switch(idx)' *ngIf='num' [ngStyle]="{
+    'background-color': 'green',
+    'color': 'white',
+    'font-family': 'Arial Rounded MT Bold',
+    'width': '100px',
+    'padding-top': '40px',
+    'padding-bottom': '40px',
+    'text-align': 'center',
+    'display':'inline-block',
+    'margin-right': '2px',
+    'border' : 'solid black 2px'
+  }">ON</div>
+  <div (click)='switch(idx)' *ngIf='!num' [ngStyle]="{
+    'background-color': 'red',
+    'color': 'white',
+    'font-family': 'Arial Rounded MT Bold',
+    'width': '100px',
+    'padding-top': '40px',
+    'padding-bottom': '40px',
+    'text-align': 'center',
+    'display':'inline-block',
+    'margin-right': '2px',
+    'border' : 'solid black 2px'
+  }">OFF</div>
+</div>
